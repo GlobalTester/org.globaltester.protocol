@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: GT Protocol
+Bundle-SymbolicName: org.globaltester.protocol
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: HJP Consulting GmbH
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.globaltester.cardconfiguration
+Import-Package: org.osgi.framework;version="1.8.0",
+ org.osgi.util.tracker
+Bundle-Activator: org.globaltester.protocol.Activator
+Export-Package: org.globaltester.protocol
