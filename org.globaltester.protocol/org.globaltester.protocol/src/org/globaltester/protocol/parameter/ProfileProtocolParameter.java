@@ -1,4 +1,4 @@
-package org.globaltester.protocol;
+package org.globaltester.protocol.parameter;
 
 /**
  * Not an actual protocol parameter but a means to separate different protocol
@@ -8,14 +8,14 @@ package org.globaltester.protocol;
  * @author amay
  *
  */
-public class ProtocolParameterSeparator extends AbstractProtocolParameterDescription
+public class ProfileProtocolParameter extends AbstractProtocolParameterDescription
 		implements ProtocolParameterDescription {
 
-	public ProtocolParameterSeparator(String name) {
+	public ProfileProtocolParameter(String name) {
 		super(name);
 	}
 
-	public ProtocolParameterSeparator(String name, String description) {
+	public ProfileProtocolParameter(String name, String description) {
 		super(name, description);
 	}
 

@@ -1,4 +1,4 @@
-package org.globaltester.protocol;
+package org.globaltester.protocol.parameter;
 
 /**
  * Abstract super implementation for {@link ProtocolParameterDescription}

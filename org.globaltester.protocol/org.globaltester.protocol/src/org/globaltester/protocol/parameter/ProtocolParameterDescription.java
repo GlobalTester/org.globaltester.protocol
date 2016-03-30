@@ -1,7 +1,10 @@
-package org.globaltester.protocol;
+package org.globaltester.protocol.parameter;
 
 /**
  * Describes a parameter that may be used by a protocol.
+ * <p/>
+ * A protocol parameter itself is essentially a String variable which may be
+ * evaluated by the protocol to whatever is needed in the protocol context.
  * <p/>
  * This interface is intentionally small so that implementing classes can handle
  * their specific type of data matching their needs. E.g. restricting values or

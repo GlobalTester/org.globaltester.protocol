@@ -9,4 +9,5 @@ Require-Bundle: org.globaltester.cardconfiguration
 Import-Package: org.osgi.framework;version="1.8.0",
  org.osgi.util.tracker
 Bundle-Activator: org.globaltester.protocol.Activator
-Export-Package: org.globaltester.protocol
+Export-Package: org.globaltester.protocol,
+ org.globaltester.protocol.parameter

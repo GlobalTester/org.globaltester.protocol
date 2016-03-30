@@ -2,6 +2,8 @@ package org.globaltester.protocol;
 
 import java.util.List;
 
+import org.globaltester.protocol.parameter.ProtocolParameterDescription;
+
 /**
  * OSGi-Service that describes the protocol (its parameters and configuration)
  * and allows instantiation.
