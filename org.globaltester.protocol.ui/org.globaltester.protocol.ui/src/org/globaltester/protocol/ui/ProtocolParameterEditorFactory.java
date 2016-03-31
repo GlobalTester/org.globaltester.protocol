@@ -10,7 +10,7 @@ public class ProtocolParameterEditorFactory {
 		
 		if (curParamDescriptor instanceof SeparatorProtocolParameter) return new SeparatorProtocolParameterEditor(tabItemComp, curParamDescriptor);
 		
-		return null;
+		return new UnknownProtocolParameterEditor(tabItemComp, curParamDescriptor);
 		
 	}
 

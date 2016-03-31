@@ -31,7 +31,7 @@ public abstract class AbstractProtocolParameterDescription implements ProtocolPa
 
 	@Override
 	public String getDescription() {
-		return description; // none
+		return description;
 	}
 
 }
