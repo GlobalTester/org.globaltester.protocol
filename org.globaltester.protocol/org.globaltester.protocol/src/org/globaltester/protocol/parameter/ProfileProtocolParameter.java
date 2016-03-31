@@ -11,12 +11,8 @@ package org.globaltester.protocol.parameter;
 public class ProfileProtocolParameter extends AbstractProtocolParameterDescription
 		implements ProtocolParameterDescription {
 
-	public ProfileProtocolParameter(String name) {
-		super(name);
-	}
-
-	public ProfileProtocolParameter(String name, String description) {
-		super(name, description);
+	public ProfileProtocolParameter(String protocolName, String name, String description) {
+		super(protocolName, name, description);
 	}
 
 }

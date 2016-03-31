@@ -11,12 +11,8 @@ package org.globaltester.protocol.parameter;
 public class SeparatorProtocolParameter extends AbstractProtocolParameterDescription
 		implements ProtocolParameterDescription {
 
-	public SeparatorProtocolParameter(String name) {
-		super(name);
-	}
-
-	public SeparatorProtocolParameter(String name, String description) {
-		super(name, description);
+	public SeparatorProtocolParameter(String protocolName,  String name, String description) {
+		super(protocolName, name, description);
 	}
 
 }

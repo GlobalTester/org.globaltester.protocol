@@ -12,16 +12,23 @@ package org.globaltester.protocol.parameter;
  */
 public abstract class AbstractProtocolParameterDescription implements ProtocolParameterDescription {
 
+	protected String protocolName = "";
 	protected String name = "";
 	protected String description = "";
 
-	public AbstractProtocolParameterDescription(String name) {
+	public AbstractProtocolParameterDescription(String protocolName, String name) {
+		this.protocolName = protocolName;
 		this.name = name;
 	}
 
-	public AbstractProtocolParameterDescription(String name, String description) {
-		this(name);
+	public AbstractProtocolParameterDescription(String protocolName, String name, String description) {
+		this(protocolName, name);
 		this.description = description;
+	}
+
+	@Override
+	public String getProtocolName() {
+		return protocolName;
 	}
 
 	@Override

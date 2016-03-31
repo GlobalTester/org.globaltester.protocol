@@ -27,6 +27,16 @@ public interface ProtocolParameterDescription {
 	public String getName();
 
 	/**
+	 * Return the name of the protocol this parameter is associated with.
+	 * <p/>
+	 * This is used together with the name of the parameter to
+	 * explicitly reference this parameter.
+	 * 
+	 * @return
+	 */
+	public String getProtocolName();
+
+	/**
 	 * Return the user description of this parameter.
 	 * <p/>
 	 * This will be used within the UI for example to label input elements.
