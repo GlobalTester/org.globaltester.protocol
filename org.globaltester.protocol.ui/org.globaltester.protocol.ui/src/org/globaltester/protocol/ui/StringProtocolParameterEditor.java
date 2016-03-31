@@ -7,7 +7,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.globaltester.protocol.parameter.ProtocolParameterDescription;
 
-public class StringProtocolParameterEditor implements ProtocolParameterEditor {
+public class StringProtocolParameterEditor extends AbstractProtocolParameterEditor {
 	
 	ProtocolParameterDescription paramDescriptor;
 	
@@ -15,6 +15,7 @@ public class StringProtocolParameterEditor implements ProtocolParameterEditor {
 	Text valueField;
 
 	public StringProtocolParameterEditor(Composite tabItemComp, ProtocolParameterDescription curParamDescriptor) {
+		super(curParamDescriptor);
 
 		lbl = new Label(tabItemComp, SWT.NONE);
 		lbl.setText(curParamDescriptor.getDescription());
@@ -23,6 +24,16 @@ public class StringProtocolParameterEditor implements ProtocolParameterEditor {
 		GridData gdMrz1 = new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1);
 		valueField.setLayoutData(gdMrz1);
 
+	}
+
+	@Override
+	public void setValue(String newValue) {
+		valueField.setText(newValue);
+	}
+
+	@Override
+	public String getValue() {
+		return valueField.getText();
 	}
 
 }

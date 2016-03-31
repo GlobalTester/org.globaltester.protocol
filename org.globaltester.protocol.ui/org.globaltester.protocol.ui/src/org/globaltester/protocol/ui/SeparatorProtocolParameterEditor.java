@@ -6,10 +6,11 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.globaltester.protocol.parameter.ProtocolParameterDescription;
 
-public class SeparatorProtocolParameterEditor implements ProtocolParameterEditor {
+public class SeparatorProtocolParameterEditor extends AbstractProtocolParameterEditor {
 
 	public SeparatorProtocolParameterEditor(Composite tabItemComp, ProtocolParameterDescription curParamDescriptor) {
-
+		super (curParamDescriptor);
+		
 		Label separator = new Label(tabItemComp, SWT.SEPARATOR | SWT.HORIZONTAL);
 		GridData gdSep = new GridData(GridData.FILL_HORIZONTAL);
 		gdSep.grabExcessHorizontalSpace = true;
@@ -25,6 +26,16 @@ public class SeparatorProtocolParameterEditor implements ProtocolParameterEditor
 			description.setLayoutData(gdDescr);
 		}
 
+	}
+
+	@Override
+	public void setValue(String newValue) {
+		// no value handled for a separator
+	}
+
+	@Override
+	public String getValue() {
+		return null; // no value handled for a separator
 	}
 
 }
