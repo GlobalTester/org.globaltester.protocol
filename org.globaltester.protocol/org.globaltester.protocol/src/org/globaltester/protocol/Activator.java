@@ -14,12 +14,14 @@ import org.osgi.util.tracker.ServiceTracker;
  */
 public class Activator implements BundleActivator {
 
+	private static Activator defaultInstance;
 	private static BundleContext context;
 	private static ServiceTracker<ProtocolFactory, ProtocolFactory> factoryTracker;
 
 	@Override
 	public void start(BundleContext bundleContext) throws Exception {
 		context = bundleContext;
+		defaultInstance = this;
 		factoryTracker = new ServiceTracker<>(context, ProtocolFactory.class, null);
 		factoryTracker.open();
 	}
@@ -30,6 +32,7 @@ public class Activator implements BundleActivator {
 			factoryTracker.close();
 			factoryTracker = null;
 		}
+		defaultInstance = null;
 		context = null;
 	}
 
@@ -50,5 +53,28 @@ public class Activator implements BundleActivator {
 		}
 
 		return factoryTracker.getServices(emptyArray);
+	}
+
+	/**
+	 * @return a {@link ProtocolFactory} that produces Protocols with the
+	 *         provided protocolName or null if none is available
+	 */
+	public static ProtocolFactory getProtocolFactoriesForName(String protocolName) {
+		if (protocolName == null) return null;
+		
+		
+		ProtocolFactory[] availableFactories = getAvailableProtocolFactories();
+		
+		for (ProtocolFactory currentFactory : availableFactories) {
+			if (protocolName.equals(currentFactory.getName())) {
+				return currentFactory;
+			}
+		}
+		
+		return null;
+	}
+
+	public static Activator getDefault() {
+		return defaultInstance;
 	}
 }
