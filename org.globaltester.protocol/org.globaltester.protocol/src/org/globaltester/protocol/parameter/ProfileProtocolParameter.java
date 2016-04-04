@@ -1,9 +1,7 @@
 package org.globaltester.protocol.parameter;
 
 /**
- * Not an actual protocol parameter but a means to separate different protocol
- * parameters semantically. This might be mapped to a visual divider within UI
- * usage.
+ * Profile that defines whether testcases are executable on the given sample.
  * 
  * @author amay
  *
