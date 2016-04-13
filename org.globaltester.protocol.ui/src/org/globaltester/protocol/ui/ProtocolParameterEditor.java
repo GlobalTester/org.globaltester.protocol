@@ -9,8 +9,8 @@ import org.globaltester.protocol.parameter.ProtocolParameterDescription;
  * condition checking).
  * <p/>
  * {@link ProtocolParameterEditor}s are created for every available
- * ProtocolParamter once the {@link CardConfigEditorWidget} is created. They can
- * be initialized with given values from an existing {@link CardConfiguration}
+ * ProtocolParamter once the {@link SampleConfigEditorWidget} is created. They can
+ * be initialized with given values from an existing {@link SampleConfig}
  * and allow retrieving all relevant informations to store their value.
  * 
  * @author amay
