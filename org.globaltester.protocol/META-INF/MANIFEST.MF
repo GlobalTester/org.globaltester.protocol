@@ -5,7 +5,7 @@ Bundle-SymbolicName: org.globaltester.protocol
 Bundle-Version: 0.0.1.qualifier
 Bundle-Vendor: HJP Consulting GmbH
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Require-Bundle: org.globaltester.cardconfiguration
+Require-Bundle: org.globaltester.sampleconfiguration
 Import-Package: org.osgi.framework;version="1.8.0",
  org.osgi.util.tracker
 Bundle-Activator: org.globaltester.protocol.Activator

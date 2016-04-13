@@ -1,6 +1,6 @@
 package org.globaltester.protocol;
 
-import org.globaltester.cardconfiguration.CardConfig;
+import org.globaltester.sampleconfiguration.SampleConfig;
 
 /**
  * A {@link Protocol} encapsulates a process defined by several steps together
@@ -14,7 +14,7 @@ import org.globaltester.cardconfiguration.CardConfig;
  * in order to retrieve or modify data as needed.
  * <p/>
  * A {@link Protocol} can extract all relevant parameters from a given
- * {@link CardConfig} use them internaly and update the CardConfiguration at any
+ * {@link SampleConfig} use them internaly and update the SampleConfiguration at any
  * time with modified values.
  * 
  * @author amay
@@ -30,15 +30,15 @@ public interface Protocol {
 	
 	/**
 	 * Extract all relevant protocol parameters from the given
-	 * {@link CardConfig}
+	 * {@link SampleConfig}
 	 */
-	public void initFromCardConfig(CardConfig sampleConfig);
+	public void initFromSampleConfig(SampleConfig sampleConfig);
 
 	/**
-	 * Update the given {@link CardConfig} object with the modified
+	 * Update the given {@link SampleConfig} object with the modified
 	 * configuration data. <p\> This is intended for protocols known to change
 	 * the internal state of the test sample and want this change to be
-	 * reflected in the CardConfiguration.
+	 * reflected in the SampleConfiguration.
 	 */
-	public void updateCardConfig(CardConfig sampleConfig);
+	public void updateSampleConfig(SampleConfig sampleConfig);
 }

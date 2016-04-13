@@ -5,7 +5,7 @@ Bundle-SymbolicName: org.globaltester.protocol.ui
 Bundle-Version: 0.0.1.qualifier
 Bundle-Vendor: HJP Consulting GmbH
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Require-Bundle: org.globaltester.cardconfiguration,
+Require-Bundle: org.globaltester.sampleconfiguration,
  org.eclipse.swt,
  org.globaltester.protocol
 Export-Package: org.globaltester.protocol.ui

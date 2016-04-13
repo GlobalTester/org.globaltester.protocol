@@ -39,7 +39,7 @@ public interface ProtocolFactory {
 	 * List of profiles relevant for this protocol.
 	 * <p/>
 	 * These profiles will be selectable within the Profiles tab of the
-	 * {@link CardConfiguration}
+	 * {@link SampleConfig}
 	 * 
 	 * @return
 	 */
