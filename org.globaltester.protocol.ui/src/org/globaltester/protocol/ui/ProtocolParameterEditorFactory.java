@@ -12,7 +12,7 @@ public class ProtocolParameterEditorFactory {
 	public static ProtocolParameterEditor createEditor(Composite tabItemComp, ProtocolParameterDescription curParamDescriptor) {
 		
 		if (curParamDescriptor instanceof SeparatorProtocolParameter) return new SeparatorProtocolParameterEditor(tabItemComp, curParamDescriptor);
-		if (curParamDescriptor instanceof ProfileProtocolParameter) return new BooleanProtocolParameterEditor(tabItemComp, curParamDescriptor);
+		if (curParamDescriptor instanceof ProfileProtocolParameter) return new BooleanProtocolParameterEditor(tabItemComp, curParamDescriptor, ((ProfileProtocolParameter) curParamDescriptor).getUseDescription());
 		
 		if (curParamDescriptor instanceof StringProtocolParameter) return new StringProtocolParameterEditor(tabItemComp, curParamDescriptor);
 		
