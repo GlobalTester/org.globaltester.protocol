@@ -8,9 +8,20 @@ package org.globaltester.protocol.parameter;
  */
 public class ProfileProtocolParameter extends AbstractProtocolParameterDescription
 		implements ProtocolParameterDescription {
+	
+	boolean useDescription;
 
 	public ProfileProtocolParameter(String protocolName, String name, String description) {
 		super(protocolName, name, description);
+		this.useDescription = false;
+	}
+	
+	public ProfileProtocolParameter(String protocolName, String name, String description, boolean useDescription) {
+		super(protocolName, name, description);
+		this.useDescription = useDescription;
 	}
 
+	public boolean getUseDescription(){
+		return useDescription;
+	}
 }

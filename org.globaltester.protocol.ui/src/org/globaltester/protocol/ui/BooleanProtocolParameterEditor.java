@@ -9,11 +9,16 @@ public class BooleanProtocolParameterEditor extends AbstractProtocolParameterEdi
 	
 	Button checkbox;
 
-	public BooleanProtocolParameterEditor(Composite tabItemComp, ProtocolParameterDescription curParamDescriptor) {
+	public BooleanProtocolParameterEditor(Composite tabItemComp, ProtocolParameterDescription curParamDescriptor, boolean useDescription) {
 		super(curParamDescriptor);
-
+		
 		checkbox = new Button(tabItemComp, SWT.CHECK);
-		checkbox.setText(paramDescr.getName());
+		if (useDescription)
+			checkbox.setText(paramDescr.getDescription());
+		else
+			checkbox.setText(paramDescr.getName());
+		
+		
 	}
 
 	@Override
@@ -25,5 +30,4 @@ public class BooleanProtocolParameterEditor extends AbstractProtocolParameterEdi
 	public String getValue() {
 		return Boolean.toString(checkbox.getSelection());
 	}
-
 }
