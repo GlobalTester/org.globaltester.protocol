@@ -1,6 +1,7 @@
 package org.globaltester.protocol.ui;
 
 import org.eclipse.swt.widgets.Composite;
+import org.globaltester.protocol.parameter.BooleanTableProtocolParameter;
 import org.globaltester.protocol.parameter.ListProtocolParameter;
 import org.globaltester.protocol.parameter.ProfileProtocolParameter;
 import org.globaltester.protocol.parameter.ProtocolParameterDescription;
@@ -17,6 +18,8 @@ public class ProtocolParameterEditorFactory {
 		if (curParamDescriptor instanceof StringProtocolParameter) return new StringProtocolParameterEditor(tabItemComp, curParamDescriptor);
 		
 		if (curParamDescriptor instanceof ListProtocolParameter) return new ListProtocolParameterEditor(tabItemComp, curParamDescriptor, ((ListProtocolParameter) curParamDescriptor).getMapping());
+		
+		if (curParamDescriptor instanceof BooleanTableProtocolParameter) return new BooleanTableProtocolParameterEditor(tabItemComp, curParamDescriptor, ((BooleanTableProtocolParameter) curParamDescriptor).getColumnDescription(), ((BooleanTableProtocolParameter) curParamDescriptor).getLineDescription(), ((BooleanTableProtocolParameter) curParamDescriptor).getTable());
 		
 		return new UnknownProtocolParameterEditor(tabItemComp, curParamDescriptor);
 		
