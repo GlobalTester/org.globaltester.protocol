@@ -1,6 +1,7 @@
 package org.globaltester.protocol.ui;
 
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
@@ -19,12 +20,16 @@ public class BooleanTableProtocolParameterEditor extends AbstractProtocolParamet
 		
 		lbl = new Label(tabItemComp, SWT.NONE);
 		lbl.setText(curParamDescriptor.getDescription());
-		
-		new Label(tabItemComp, SWT.NONE);
+		GridData gdLbl = new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1);
+		lbl.setLayoutData(gdLbl);
 		
 		valueField = new Composite(tabItemComp, SWT.READ_ONLY);
-		GridLayout gdData = new GridLayout(table.length + 1, false);
-		valueField.setLayout(gdData);
+		GridData gdValueField = new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1);
+		valueField.setLayoutData(gdValueField);
+		GridLayout gdLayout = new GridLayout(table.length + 1, true);
+		gdLayout.horizontalSpacing = 20;
+		gdLayout.verticalSpacing = 10;
+		valueField.setLayout(gdLayout);
 		
 		new Label(valueField, SWT.NONE);
 		for(int i = 0; i<descrColumns.length; i++) {
@@ -34,8 +39,6 @@ public class BooleanTableProtocolParameterEditor extends AbstractProtocolParamet
 		addRows(valueField, descrRow, table);
 		
 		valueField.setVisible(true);
-		
-		new Label(tabItemComp, SWT.NONE);
 	}
 	
 	private void addRows(Composite composite, String[] descrRow, boolean[][] table) {

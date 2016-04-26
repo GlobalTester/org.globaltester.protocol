@@ -1,9 +1,9 @@
 package org.globaltester.protocol.parameter;
 
 /**
- * Generic protocol parameter that defines a ICS.
+ * Generic protocol parameter that defines a table with check boxes.
  * 
- * @author amay
+ * @author cstroh
  *
  */
 public class BooleanTableProtocolParameter extends AbstractProtocolParameterDescription
@@ -13,11 +13,19 @@ public class BooleanTableProtocolParameter extends AbstractProtocolParameterDesc
 	private String[] descrColumns;
 	private String[] descrLines;
 
-	public BooleanTableProtocolParameter(String protocolName, String name, String description, String[] descrColumns, String[] descrLines, boolean[][] table) {
+	/**
+	 * @param protocolName name of the protocol
+	 * @param name name of the parameter
+	 * @param description parameter description
+	 * @param descrColumns description of the columnes of the boolean table
+	 * @param descrRows description of the rows of the boolean table
+	 * @param table if element is true, then the corresponding check box element shall exist
+	 */
+	public BooleanTableProtocolParameter(String protocolName, String name, String description, String[] descrColumns, String[] descrRows, boolean[][] table) {
 		super(protocolName, name, description);
 		this.table = table;
 		this.descrColumns = descrColumns;
-		this.descrLines = descrLines;
+		this.descrLines = descrRows;
 	}
 	
 	public boolean[][] getTable(){
