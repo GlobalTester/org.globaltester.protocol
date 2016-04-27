@@ -95,4 +95,16 @@ public class BooleanTableProtocolParameterEditor extends AbstractProtocolParamet
 		return codedSelection;
 	}
 
+	@Override
+	public void setEditable(boolean editable) {
+		for(int row = 0; row<buttonTable.length; row++) {
+			for (int column = 0; column<buttonTable[row].length; column++) {
+				if(buttonTable[row][column] != null) {
+					buttonTable[row][column].setEnabled(editable);
+				}
+			}
+		}
+		
+	}
+
 }

@@ -32,5 +32,11 @@ public interface ProtocolParameterEditor {
 	 * Retrieve the currently displayed value from this editor.
 	 */
 	public String getValue();
+	
+	/**
+	 * Sets the editable state.
+	 * @param editable the new editable state
+	 */
+	public void setEditable(boolean editable);
 
 }
