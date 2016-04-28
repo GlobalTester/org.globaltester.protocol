@@ -72,4 +72,10 @@ public class FileProtocolParameterEditor extends AbstractProtocolParameterEditor
 		return currentDir;
 		
 	}
+
+	@Override
+	public void setEditable(boolean editable) {
+		valueField.setEditable(editable);
+		btnFileDialog.setEnabled(editable);
+	}
 }
