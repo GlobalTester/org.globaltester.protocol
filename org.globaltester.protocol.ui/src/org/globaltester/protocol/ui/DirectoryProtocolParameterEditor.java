@@ -5,14 +5,14 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.DirectoryDialog;
 import org.eclipse.swt.widgets.Event;
-import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Text;
 import org.globaltester.protocol.parameter.ProtocolParameterDescription;
 
-public class FileProtocolParameterEditor extends AbstractProtocolParameterEditor{
+public class DirectoryProtocolParameterEditor extends AbstractProtocolParameterEditor{
 	
 	Label lbl;
 	Text valueField;
@@ -20,7 +20,7 @@ public class FileProtocolParameterEditor extends AbstractProtocolParameterEditor
 	Composite certComposite;
 	String currentDir;
 	
-	public FileProtocolParameterEditor(Composite tabItemComp, ProtocolParameterDescription curParamDescriptor) {
+	public DirectoryProtocolParameterEditor(Composite tabItemComp, ProtocolParameterDescription curParamDescriptor) {
 		super(curParamDescriptor);
 		
 		certComposite = new Composite(tabItemComp, SWT.NONE);
@@ -45,12 +45,12 @@ public class FileProtocolParameterEditor extends AbstractProtocolParameterEditor
 		btnFileDialog.addListener(SWT.Selection, new Listener() {
 			@Override
 			public void handleEvent(Event event) {
-				FileDialog fileDialog = new FileDialog(certComposite.getShell());
+				DirectoryDialog directoryDialog = new DirectoryDialog(certComposite.getShell());
 				
-				fileDialog.setFilterPath(valueField.getText());
-				fileDialog.setText("Please select a certificate and click OK");
+				directoryDialog.setFilterPath(valueField.getText());
+				directoryDialog.setMessage("Please select a certificate and click OK");
 				
-				String dir = fileDialog.open();
+				String dir = directoryDialog.open();
 				if (dir != null) {
 					valueField.setText(dir);
 					currentDir = dir;

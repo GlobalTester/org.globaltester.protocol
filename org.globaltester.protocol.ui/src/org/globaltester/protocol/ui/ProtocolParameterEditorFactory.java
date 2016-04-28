@@ -4,6 +4,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.globaltester.protocol.parameter.FileProtocolParameter;
 import org.globaltester.protocol.parameter.BooleanProtocolParameter;
 import org.globaltester.protocol.parameter.BooleanTableProtocolParameter;
+import org.globaltester.protocol.parameter.DirectoryProtocolParameter;
 import org.globaltester.protocol.parameter.ListProtocolParameter;
 import org.globaltester.protocol.parameter.ProfileProtocolParameter;
 import org.globaltester.protocol.parameter.ProtocolParameterDescription;
@@ -20,6 +21,7 @@ public class ProtocolParameterEditorFactory {
 		if (curParamDescriptor instanceof ProfileProtocolParameter) return new ProfileProtocolParameterEditor(tabItemComp, curParamDescriptor);
 		if (curParamDescriptor instanceof BooleanProtocolParameter) return new BooleanProtocolParameterEditor(tabItemComp, curParamDescriptor);
 		if (curParamDescriptor instanceof FileProtocolParameter) return new FileProtocolParameterEditor(tabItemComp, curParamDescriptor);
+		if (curParamDescriptor instanceof DirectoryProtocolParameter) return new DirectoryProtocolParameterEditor(tabItemComp, curParamDescriptor);
 		
 		if (curParamDescriptor instanceof StringProtocolParameter) return new StringProtocolParameterEditor(tabItemComp, curParamDescriptor);
 		

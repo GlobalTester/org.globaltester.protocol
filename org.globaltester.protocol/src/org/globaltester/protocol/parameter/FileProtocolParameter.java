@@ -1,7 +1,7 @@
 package org.globaltester.protocol.parameter;
 
 /**
- * Generic protocol parameter that defines a path.
+ * Generic protocol parameter that defines a path to a file.
  * 
  * @author jgoeke
  *
