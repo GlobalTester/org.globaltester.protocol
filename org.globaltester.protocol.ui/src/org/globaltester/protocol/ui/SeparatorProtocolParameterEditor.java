@@ -38,4 +38,9 @@ public class SeparatorProtocolParameterEditor extends AbstractProtocolParameterE
 		return null; // no value handled for a separator
 	}
 
+	@Override
+	public void setEditable(boolean editable) {
+		// separator is never editable
+	}
+
 }

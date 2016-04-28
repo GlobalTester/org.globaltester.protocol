@@ -36,4 +36,9 @@ public class StringProtocolParameterEditor extends AbstractProtocolParameterEdit
 		return valueField.getText();
 	}
 
+	@Override
+	public void setEditable(boolean editable) {
+		valueField.setEditable(editable);
+	}
+
 }

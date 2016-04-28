@@ -45,4 +45,9 @@ public class ListProtocolParameterEditor extends AbstractProtocolParameterEditor
 		return mapping.get(valueField.getItem(valueField.getSelectionIndex()));
 	}
 
+	@Override
+	public void setEditable(boolean editable) {
+		valueField.setEnabled(editable);
+	}
+
 }

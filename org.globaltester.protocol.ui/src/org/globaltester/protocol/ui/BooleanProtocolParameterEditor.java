@@ -26,4 +26,9 @@ public class BooleanProtocolParameterEditor extends AbstractProtocolParameterEdi
 	public String getValue() {
 		return Boolean.toString(checkbox.getSelection());
 	}
+
+	@Override
+	public void setEditable(boolean editable) {
+		checkbox.setEnabled(editable);
+	}
 }
