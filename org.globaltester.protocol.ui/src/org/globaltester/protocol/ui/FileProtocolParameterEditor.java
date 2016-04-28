@@ -33,7 +33,7 @@ public class FileProtocolParameterEditor extends AbstractProtocolParameterEditor
 		lbl = new Label(certComposite, SWT.NONE);
 		lbl.setText(curParamDescriptor.getDescription());
 		GridData gdLbl = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
-		gdLbl.widthHint = 70;
+		gdLbl.widthHint = 110;
 		lbl.setLayoutData(gdLbl);
 		
 		valueField = new Text(certComposite, SWT.BORDER);
