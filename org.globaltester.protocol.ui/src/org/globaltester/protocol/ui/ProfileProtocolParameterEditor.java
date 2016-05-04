@@ -9,6 +9,7 @@ public class ProfileProtocolParameterEditor extends BooleanProtocolParameterEdit
 		super(tabItemComp, curParamDescriptor);
 
 		checkbox.setText(paramDescr.getName());
+		checkbox.setToolTipText(paramDescr.getDescription());
 		
 	}
 }
