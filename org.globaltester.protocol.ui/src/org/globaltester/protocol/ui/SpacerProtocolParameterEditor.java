@@ -3,6 +3,7 @@ package org.globaltester.protocol.ui;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Listener;
 import org.globaltester.protocol.parameter.ProtocolParameterDescription;
 
 public class SpacerProtocolParameterEditor extends AbstractProtocolParameterEditor {
@@ -27,5 +28,9 @@ public class SpacerProtocolParameterEditor extends AbstractProtocolParameterEdit
 	public void setEditable(boolean editable) {
 		// spacer is never editable
 	}
-
+	
+	@Override
+	public void addListener(int eventType, Listener listener) {
+		// spacer needs no listener
+	}
 }

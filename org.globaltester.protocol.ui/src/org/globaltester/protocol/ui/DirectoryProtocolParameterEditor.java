@@ -74,4 +74,9 @@ public class DirectoryProtocolParameterEditor extends AbstractProtocolParameterE
 		valueField.setEditable(editable);
 		btnFileDialog.setEnabled(editable);
 	}
+	
+	@Override
+	public void addListener(int eventType, Listener listener) {
+		valueField.addListener(eventType, listener);
+	}
 }

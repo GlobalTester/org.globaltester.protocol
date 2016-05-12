@@ -3,6 +3,7 @@ package org.globaltester.protocol.ui;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Listener;
 import org.globaltester.protocol.parameter.ProtocolParameterDescription;
 
 public class BooleanProtocolParameterEditor extends AbstractProtocolParameterEditor {
@@ -30,5 +31,10 @@ public class BooleanProtocolParameterEditor extends AbstractProtocolParameterEdi
 	@Override
 	public void setEditable(boolean editable) {
 		checkbox.setEnabled(editable);
+	}
+	
+	@Override
+	public void addListener(int eventType, Listener listener) {
+		checkbox.addListener(eventType, listener);
 	}
 }
