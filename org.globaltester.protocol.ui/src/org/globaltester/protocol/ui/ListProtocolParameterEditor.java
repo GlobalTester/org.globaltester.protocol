@@ -8,6 +8,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Listener;
 import org.globaltester.protocol.parameter.ProtocolParameterDescription;
 
 public class ListProtocolParameterEditor extends AbstractProtocolParameterEditor {
@@ -49,5 +50,11 @@ public class ListProtocolParameterEditor extends AbstractProtocolParameterEditor
 	public void setEditable(boolean editable) {
 		valueField.setEnabled(editable);
 	}
+	
+	@Override
+	public void addListener(int eventType, Listener listener) {
+		valueField.addListener(eventType, listener);
+	}
+	
 
 }

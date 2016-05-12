@@ -6,6 +6,7 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Listener;
 import org.globaltester.protocol.parameter.ProtocolParameterDescription;
 
 public class BooleanTableProtocolParameterEditor extends AbstractProtocolParameterEditor {
@@ -106,5 +107,15 @@ public class BooleanTableProtocolParameterEditor extends AbstractProtocolParamet
 		}
 		
 	}
-
+	
+	@Override
+	public void addListener(int eventType, Listener listener) {
+		for(int row = 0; row<buttonTable.length; row++) {
+			for (int column = 0; column<buttonTable[row].length; column++) {
+				if(buttonTable[row][column] != null) {
+					buttonTable[row][column].addListener(eventType, listener);
+				} 
+			}
+		}
+	}
 }

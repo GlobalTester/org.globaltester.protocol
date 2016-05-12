@@ -1,5 +1,6 @@
 package org.globaltester.protocol.ui;
 
+import org.eclipse.swt.widgets.Listener;
 import org.globaltester.protocol.parameter.ProtocolParameterDescription;
 
 /**
@@ -38,5 +39,7 @@ public interface ProtocolParameterEditor {
 	 * @param editable the new editable state
 	 */
 	public void setEditable(boolean editable);
+	
+	public void addListener(int eventType, Listener listener);
 
 }

@@ -4,6 +4,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Listener;
 import org.globaltester.protocol.parameter.ProtocolParameterDescription;
 
 public class SeparatorProtocolParameterEditor extends AbstractProtocolParameterEditor {
@@ -42,5 +43,11 @@ public class SeparatorProtocolParameterEditor extends AbstractProtocolParameterE
 	public void setEditable(boolean editable) {
 		// separator is never editable
 	}
+	
+	@Override
+	public void addListener(int eventType, Listener listener) {
+		// separator needs no listener
+	}
+	
 
 }
