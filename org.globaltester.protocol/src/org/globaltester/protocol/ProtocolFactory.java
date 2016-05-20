@@ -36,16 +36,6 @@ public interface ProtocolFactory {
 	public List<ProtocolParameterDescription> getParameterDescriptors();
 
 	/**
-	 * List of profiles relevant for this protocol.
-	 * <p/>
-	 * These profiles will be selectable within the Profiles tab of the
-	 * {@link SampleConfig}
-	 * 
-	 * @return
-	 */
-	public String[] getProfiles();
-
-	/**
 	 * Creates a new {@link Protocol} of type described by this instance that
 	 * wraps the given {@link CommunicationObject}.
 	 * 
