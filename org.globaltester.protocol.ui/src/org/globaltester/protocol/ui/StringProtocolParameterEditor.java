@@ -7,7 +7,13 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Text;
 import org.globaltester.protocol.parameter.ProtocolParameterDescription;
+import org.globaltester.sampleconfiguration.SampleConfig;
 
+/**
+ * Allows setting {@link String} values for {@link SampleConfig} parameters.
+ * @author amay
+ *
+ */
 public class StringProtocolParameterEditor extends AbstractProtocolParameterEditor {
 	
 	ProtocolParameterDescription paramDescriptor;
@@ -26,11 +32,18 @@ public class StringProtocolParameterEditor extends AbstractProtocolParameterEdit
 		valueField.setLayoutData(getLayoutData());
 	}
 
-	public GridData getLayoutData() {
+	/**
+	 * @return the {@link GridData} to be used for laouting the the value field of this editor
+	 */
+	protected GridData getLayoutData() {
 		return new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1);
 	}
 
-	public int getStyle() {
+	/**
+	 * @see Text
+	 * @return the style value to be used for the value field
+	 */
+	protected int getStyle() {
 		return SWT.BORDER;
 	}
 
