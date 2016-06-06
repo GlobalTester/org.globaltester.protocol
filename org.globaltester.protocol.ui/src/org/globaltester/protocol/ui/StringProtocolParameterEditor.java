@@ -21,9 +21,16 @@ public class StringProtocolParameterEditor extends AbstractProtocolParameterEdit
 		lbl = new Label(tabItemComp, SWT.NONE);
 		lbl.setText(curParamDescriptor.getDescription());
 
-		valueField = new Text(tabItemComp, SWT.BORDER);
-		GridData gdMrz1 = new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1);
-		valueField.setLayoutData(gdMrz1);
+		valueField = new Text(tabItemComp, getStyle());
+		valueField.setLayoutData(getLayoutData());
+	}
+
+	public GridData getLayoutData() {
+		return new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1);
+	}
+
+	public int getStyle() {
+		return SWT.BORDER;
 	}
 
 	@Override

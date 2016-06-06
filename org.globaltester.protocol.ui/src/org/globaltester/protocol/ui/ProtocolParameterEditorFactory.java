@@ -10,6 +10,7 @@ import org.globaltester.protocol.parameter.ProfileProtocolParameter;
 import org.globaltester.protocol.parameter.ProtocolParameterDescription;
 import org.globaltester.protocol.parameter.SeparatorProtocolParameter;
 import org.globaltester.protocol.parameter.SpacerProtocolParameter;
+import org.globaltester.protocol.parameter.MultilineStringProtocolParameter;
 import org.globaltester.protocol.parameter.StringProtocolParameter;
 
 public class ProtocolParameterEditorFactory {
@@ -22,11 +23,9 @@ public class ProtocolParameterEditorFactory {
 		if (curParamDescriptor instanceof BooleanProtocolParameter) return new BooleanProtocolParameterEditor(tabItemComp, curParamDescriptor);
 		if (curParamDescriptor instanceof FileProtocolParameter) return new FileProtocolParameterEditor(tabItemComp, curParamDescriptor);
 		if (curParamDescriptor instanceof DirectoryProtocolParameter) return new DirectoryProtocolParameterEditor(tabItemComp, curParamDescriptor);
-		
+		if (curParamDescriptor instanceof MultilineStringProtocolParameter) return new MultilineStringProtocolParameterEditor(tabItemComp, curParamDescriptor);
 		if (curParamDescriptor instanceof StringProtocolParameter) return new StringProtocolParameterEditor(tabItemComp, curParamDescriptor);
-		
 		if (curParamDescriptor instanceof ListProtocolParameter) return new ListProtocolParameterEditor(tabItemComp, curParamDescriptor, ((ListProtocolParameter) curParamDescriptor).getMapping());
-		
 		if (curParamDescriptor instanceof BooleanTableProtocolParameter) return new BooleanTableProtocolParameterEditor(tabItemComp, curParamDescriptor, ((BooleanTableProtocolParameter) curParamDescriptor).getColumnDescription(), ((BooleanTableProtocolParameter) curParamDescriptor).getLineDescription(), ((BooleanTableProtocolParameter) curParamDescriptor).getTable());
 		
 		return new UnknownProtocolParameterEditor(tabItemComp, curParamDescriptor);
