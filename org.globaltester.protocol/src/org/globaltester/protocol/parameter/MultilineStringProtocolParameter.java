@@ -6,8 +6,7 @@ package org.globaltester.protocol.parameter;
  * @author amay
  *
  */
-public class MultilineStringProtocolParameter extends AbstractProtocolParameterDescription
-		implements ProtocolParameterDescription {
+public class MultilineStringProtocolParameter extends StringProtocolParameter {
 
 	private int numberOfLines;
 

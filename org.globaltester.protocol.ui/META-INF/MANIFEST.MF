@@ -7,5 +7,6 @@ Bundle-Vendor: HJP Consulting GmbH
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.globaltester.sampleconfiguration,
  org.eclipse.swt,
- org.globaltester.protocol
+ org.globaltester.protocol,
+ org.eclipse.jface
 Export-Package: org.globaltester.protocol.ui

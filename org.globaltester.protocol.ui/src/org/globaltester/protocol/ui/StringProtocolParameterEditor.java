@@ -22,6 +22,7 @@ public class StringProtocolParameterEditor extends AbstractProtocolParameterEdit
 		lbl.setText(curParamDescriptor.getDescription());
 
 		valueField = new Text(tabItemComp, getStyle());
+		valueField.setFont(ProtocolParameterEditorFactory.FONT_MONOSPACE);
 		valueField.setLayoutData(getLayoutData());
 	}
 

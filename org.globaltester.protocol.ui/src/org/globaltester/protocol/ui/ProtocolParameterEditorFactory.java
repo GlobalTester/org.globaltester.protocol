@@ -1,20 +1,23 @@
 package org.globaltester.protocol.ui;
 
+import org.eclipse.jface.resource.JFaceResources;
+import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Composite;
-import org.globaltester.protocol.parameter.FileProtocolParameter;
 import org.globaltester.protocol.parameter.BooleanProtocolParameter;
 import org.globaltester.protocol.parameter.BooleanTableProtocolParameter;
 import org.globaltester.protocol.parameter.DirectoryProtocolParameter;
+import org.globaltester.protocol.parameter.FileProtocolParameter;
 import org.globaltester.protocol.parameter.ListProtocolParameter;
+import org.globaltester.protocol.parameter.MultilineStringProtocolParameter;
 import org.globaltester.protocol.parameter.ProfileProtocolParameter;
 import org.globaltester.protocol.parameter.ProtocolParameterDescription;
 import org.globaltester.protocol.parameter.SeparatorProtocolParameter;
 import org.globaltester.protocol.parameter.SpacerProtocolParameter;
-import org.globaltester.protocol.parameter.MultilineStringProtocolParameter;
 import org.globaltester.protocol.parameter.StringProtocolParameter;
 
 public class ProtocolParameterEditorFactory {
-
+	public static final Font FONT_MONOSPACE = JFaceResources.getFont(JFaceResources.TEXT_FONT);
+	
 	public static ProtocolParameterEditor createEditor(Composite tabItemComp, ProtocolParameterDescription curParamDescriptor) {
 		
 		if (curParamDescriptor instanceof SeparatorProtocolParameter) return new SeparatorProtocolParameterEditor(tabItemComp, curParamDescriptor);
