@@ -35,10 +35,13 @@ public interface ProtocolParameterEditor {
 	public String getValue();
 	
 	/**
-	 * Sets the editable state.
-	 * @param editable the new editable state
+	 * Sets the active state. This determines if the editor enabled for editing
+	 * and modifies the visual representation to indicate the newly set state.
+	 * 
+	 * @param active
+	 *            the new editable state
 	 */
-	public void setEditable(boolean editable);
+	public void setActive(boolean active);
 	
 	public void addListener(int eventType, Listener listener);
 

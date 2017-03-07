@@ -25,7 +25,7 @@ public class SpacerProtocolParameterEditor extends AbstractProtocolParameterEdit
 	}
 
 	@Override
-	public void setEditable(boolean editable) {
+	public void setActive(boolean active) {
 		// spacer is never editable
 	}
 	

@@ -47,8 +47,8 @@ public class ListProtocolParameterEditor extends AbstractProtocolParameterEditor
 	}
 
 	@Override
-	public void setEditable(boolean editable) {
-		valueField.setEnabled(editable);
+	public void setActive(boolean active) {
+		valueField.setEnabled(active);
 	}
 	
 	@Override

@@ -29,8 +29,8 @@ public class BooleanProtocolParameterEditor extends AbstractProtocolParameterEdi
 	}
 
 	@Override
-	public void setEditable(boolean editable) {
-		checkbox.setEnabled(editable);
+	public void setActive(boolean active) {
+		checkbox.setEnabled(active);
 	}
 	
 	@Override

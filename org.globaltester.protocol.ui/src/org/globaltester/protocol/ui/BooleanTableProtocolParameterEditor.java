@@ -97,11 +97,11 @@ public class BooleanTableProtocolParameterEditor extends AbstractProtocolParamet
 	}
 
 	@Override
-	public void setEditable(boolean editable) {
+	public void setActive(boolean active) {
 		for(int row = 0; row<buttonTable.length; row++) {
 			for (int column = 0; column<buttonTable[row].length; column++) {
 				if(buttonTable[row][column] != null) {
-					buttonTable[row][column].setEnabled(editable);
+					buttonTable[row][column].setEnabled(active);
 				}
 			}
 		}

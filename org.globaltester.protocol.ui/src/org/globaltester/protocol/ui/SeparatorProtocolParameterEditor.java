@@ -40,7 +40,7 @@ public class SeparatorProtocolParameterEditor extends AbstractProtocolParameterE
 	}
 
 	@Override
-	public void setEditable(boolean editable) {
+	public void setActive(boolean active) {
 		// separator is never editable
 	}
 	
