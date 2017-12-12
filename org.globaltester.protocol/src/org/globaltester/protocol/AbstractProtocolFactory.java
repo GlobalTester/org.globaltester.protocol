@@ -14,7 +14,7 @@ public abstract class AbstractProtocolFactory implements ProtocolFactory {
 		this.name = name;
 	}
 	
-	public void addParameterDescription(ProtocolParameterDescription description){
+	public final void addParameterDescription(ProtocolParameterDescription description){
 		if (description == null){
 			throw new IllegalArgumentException("The given description can not be null");
 		}
